@@ -1,0 +1,52 @@
+/* Container for the entire editor component */
+.editor-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 60px); /* Adjust height to account for the footer */
+  max-height: calc(100vh - 60px); /* Ensure it doesn't grow beyond this */
+}
+
+/* Header for the project title */
+.project-name-title {
+  background-color: #343a40; /* Dark background */
+  color: white; /* White text */
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+/* Header for user state */
+.user-state-title {
+  background-color: #6c757d; /* Secondary color background */
+  color: white; /* White text */
+  display: flex;
+  justify-content: space-between; /* Spread items to ends */
+  align-items: center;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+/* Flex container for the editor and status indicator */
+.editor-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Take up remaining space */
+  overflow: hidden; /* Hide any overflow */
+}
+
+/* Code mirror editor styling */
+.code-mirror-wrapper {
+  flex: 1; /* Take up all available space */
+  overflow: auto; /* Allow scrolling if necessary */
+}
+
+.code-mirror-wrapper .CodeMirror{
+  height: 100%;
+}
+/* Correct code indicator */
+.correct-code-indicator {
+  text-align: center;
+  color: green;
+  font-size: 1.125rem;
+  margin: 1rem 0;
+}

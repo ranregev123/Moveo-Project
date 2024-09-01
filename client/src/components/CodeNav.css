@@ -1,0 +1,33 @@
+.code-card-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center cards horizontally */
+  }
+
+  .code-card-header{
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .new-code-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.5rem;
+    position: relative;
+  }
+
+  .plus-icon {
+    font-size: 48px;
+    line-height: 1;
+  }
+
+  .new-code-card p {
+    margin: 10px 0 0 0;
+  }
+  

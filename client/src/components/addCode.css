@@ -1,0 +1,49 @@
+.add-code-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .input-section label {
+    color: white;
+  }
+  
+  .input-section input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .editor-section {
+    background-color: #282c34;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .editor-section h2 {
+    color: white;
+    margin-bottom: 10px;
+  }
+  
+  .save-button {
+    background-color: #61dafb;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    align-self: center;
+  }
+  
+  .save-button:hover {
+    background-color: #21a1f1;
+  }
+  

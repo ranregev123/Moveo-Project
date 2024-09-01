@@ -1,0 +1,47 @@
+/* General body styling */
+body {
+  margin: 0;
+  background-color: #3f3f3f;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* App container using grid layout */
+.app-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto; /* Header, main content, footer */
+}
+
+/* Main container should fill available space */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Prevent overflow issues */
+}
+
+/* Ensure editor content fits within the available space */
+.editor-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Take up remaining space */
+  overflow: hidden; /* Hide overflow */
+}
+
+.editor-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Fill available space */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.code-mirror-wrapper {
+  flex: 1; /* Fill the available space */
+  overflow: auto; /* Enable scrolling if content overflows */
+}
