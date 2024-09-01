@@ -1,13 +1,16 @@
 import pkg from 'pg';
+import dotenv from 'dotenv';
+dotenv.config();
 const { Pool } = pkg;
 const pool = new Pool({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'MoveoProject',
-  password: 'admin',
-  port: 5432,
-})
-
+  user: process.env.DB_USER,
+  host: process.env.DB_HOST,
+  database: process.env.DB_NAME,
+  password: process.env.DB_PASSWORD,
+  port: process.env.DB_PORT,
+});
+//gZGX9TEMTDkkC1cA
+//MoveoProjectDB
 
 const getCodes = (req, res) => {
     pool.query('SELECT * FROM public."Code"', (error, results) => {
