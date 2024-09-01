@@ -7,7 +7,16 @@ import cors from 'cors';
 const port = 10000
 const app = express();
 app.use(express.json());
-app.use(cors({ origin: true }));
+const allowedOrigins = ['https://66d47e9bb15368444937f838--relaxed-froyo-7eee23.netlify.app'];
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
+}));
 
 const server = createServer(app);
 const io = new Server(server);
